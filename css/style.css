@@ -6,27 +6,27 @@
    CSS Variables
    ============================================ */
 :root {
-    /* Colors */
-    --color-primary: #ff1744;
-    --color-primary-dark: #d50032;
-    --color-primary-light: #ff5177;
-    --color-secondary: #7c4dff;
-    --color-secondary-dark: #651fff;
-    --color-accent: #ff9100;
+    /* Colors - Elegant and Modern Palette */
+    --color-primary: #e94560;
+    --color-primary-dark: #d63651;
+    --color-primary-light: #ef6b7f;
+    --color-secondary: #6c63ff;
+    --color-secondary-dark: #5a52d5;
+    --color-accent: #ffa45b;
 
-    --color-dark: #0a0e27;
-    --color-dark-light: #151b3d;
-    --color-dark-lighter: #1e2749;
+    --color-dark: #0f0f1e;
+    --color-dark-light: #1a1a2e;
+    --color-dark-lighter: #252542;
 
     --color-text: #ffffff;
-    --color-text-secondary: #b8b9c9;
-    --color-text-muted: #7a7b8a;
+    --color-text-secondary: #c4c4d4;
+    --color-text-muted: #8e8ea0;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #ff1744 0%, #7c4dff 100%);
-    --gradient-secondary: linear-gradient(135deg, #7c4dff 0%, #ff9100 100%);
-    --gradient-dark: linear-gradient(180deg, #0a0e27 0%, #151b3d 100%);
-    --gradient-overlay: linear-gradient(135deg, rgba(255, 23, 68, 0.9) 0%, rgba(124, 77, 255, 0.9) 100%);
+    /* Gradients - Softer and More Elegant */
+    --gradient-primary: linear-gradient(135deg, #e94560 0%, #6c63ff 100%);
+    --gradient-secondary: linear-gradient(135deg, #6c63ff 0%, #ffa45b 100%);
+    --gradient-dark: linear-gradient(180deg, #0f0f1e 0%, #1a1a2e 100%);
+    --gradient-overlay: linear-gradient(135deg, rgba(233, 69, 96, 0.85) 0%, rgba(108, 99, 255, 0.85) 100%);
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -52,7 +52,7 @@
     --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.3);
-    --shadow-glow: 0 0 30px rgba(255, 23, 68, 0.3);
+    --shadow-glow: 0 0 30px rgba(233, 69, 96, 0.25);
 }
 
 /* ============================================
@@ -244,7 +244,7 @@ a:hover {
 }
 
 .header.scrolled {
-    background: rgba(10, 14, 39, 0.95);
+    background: rgba(15, 15, 30, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-md);
 }
@@ -902,6 +902,43 @@ section {
    Responsive Design
    ============================================ */
 
+/* Large Desktops */
+@media (min-width: 1441px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .navbar-content {
+        gap: 3rem;
+    }
+
+    .nav-menu {
+        gap: 2.5rem;
+    }
+}
+
+/* Desktop Optimization */
+@media (min-width: 1025px) {
+    .navbar-content {
+        gap: 2rem;
+    }
+
+    .nav-menu {
+        flex: 1;
+        justify-content: center;
+        max-width: none;
+    }
+
+    .header-phone {
+        flex-shrink: 0;
+    }
+
+    /* Ensure proper spacing on desktop */
+    .logo {
+        flex-shrink: 0;
+    }
+}
+
 /* Tablets */
 @media (max-width: 1024px) {
     :root {
@@ -939,7 +976,7 @@ section {
         width: 100%;
         max-width: 300px;
         height: calc(100vh - 70px);
-        background: rgba(10, 14, 39, 0.98);
+        background: rgba(15, 15, 30, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
         padding: var(--spacing-md);
