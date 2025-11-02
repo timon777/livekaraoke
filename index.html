@@ -74,20 +74,89 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <!-- Background Options - Choose one by commenting/uncommenting -->
+        <!-- ============================================
+             ВЫБЕРИТЕ ОДИН ВАРИАНТ ФОНА
+             Раскомментируйте нужный вариант и закомментируйте остальные
+             ============================================ -->
 
-        <!-- Option 1: Video Background (Uncomment to use) -->
+        <!--
+        ============================================
+        ВАРИАНТ 1A: Видео "Music Band Performing" (Рекомендуется!)
+        Источник: Pexels (бесплатно)
+        Описание: Музыкальная группа на выступлении
+        Ссылка: https://www.pexels.com/video/music-band-performing-6274341/
+        ============================================
+        -->
         <!--
         <div class="hero-video-bg">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="videos/hero-background.mp4" type="video/mp4">
-                <source src="videos/hero-background.webm" type="video/webm">
+            <video autoplay muted loop playsinline class="hero-video" poster="images/hero-poster.jpg">
+                <source src="https://videos.pexels.com/video-files/6274341/6274341-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
             </video>
             <div class="hero-overlay"></div>
         </div>
         -->
 
-        <!-- Option 2: Animated Gradient Background (Currently Active) -->
+        <!--
+        ============================================
+        ВАРИАНТ 1B: Видео "Rock Band Concert"
+        Источник: Pexels (бесплатно)
+        Описание: Рок-группа на концерте с динамичным освещением
+        Ссылка: https://www.pexels.com/video/rock-band-concert-857173/
+        ============================================
+        -->
+        <!--
+        <div class="hero-video-bg">
+            <video autoplay muted loop playsinline class="hero-video" poster="images/hero-poster.jpg">
+                <source src="https://videos.pexels.com/video-files/857173/857173-hd_1920_1080_30fps.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        -->
+
+        <!--
+        ============================================
+        ВАРИАНТ 1C: Видео "Music on Concert"
+        Источник: Pexels (бесплатно)
+        Описание: Живая музыка на концерте
+        Ссылка: https://www.pexels.com/video/music-on-concert-13641378/
+        ============================================
+        -->
+        <!--
+        <div class="hero-video-bg">
+            <video autoplay muted loop playsinline class="hero-video" poster="images/hero-poster.jpg">
+                <source src="https://videos.pexels.com/video-files/13641378/13641378-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        -->
+
+        <!--
+        ============================================
+        ВАРИАНТ 1D: Локальное видео (после скачивания)
+        Скачайте видео и поместите в папку videos/
+        См. инструкции: videos/README.md
+        ============================================
+        -->
+        <!--
+        <div class="hero-video-bg">
+            <video autoplay muted loop playsinline class="hero-video" poster="images/hero-poster.jpg">
+                <source src="videos/hero-background.mp4" type="video/mp4">
+                <source src="videos/hero-background.webm" type="video/webm">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        -->
+
+        <!--
+        ============================================
+        ВАРИАНТ 2: Анимированный градиент (По умолчанию)
+        Плавные движущиеся градиенты - легковесный и современный
+        ============================================
+        -->
         <div class="hero-bg-animated">
             <div class="gradient-layer gradient-layer-1"></div>
             <div class="gradient-layer gradient-layer-2"></div>
@@ -95,7 +164,12 @@
             <div class="hero-overlay"></div>
         </div>
 
-        <!-- Option 3: Animated Particles Background (Uncomment to use) -->
+        <!--
+        ============================================
+        ВАРИАНТ 3: Анимированные частицы
+        Поднимающиеся цветные пузыри - эффектно и динамично
+        ============================================
+        -->
         <!--
         <div class="hero-particles-bg">
             <div class="particles-container" id="particlesContainer"></div>
