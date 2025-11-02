@@ -383,10 +383,65 @@ window.addEventListener('load', () => {
 });
 
 // ============================================
+// Hero Background: Particles Effect (Option 3)
+// ============================================
+function createParticles() {
+    const particlesContainer = document.getElementById('particlesContainer');
+    if (!particlesContainer) return;
+
+    const particleCount = 50;
+    const colors = [
+        'rgba(233, 69, 96, 0.3)',
+        'rgba(108, 99, 255, 0.3)',
+        'rgba(255, 164, 91, 0.3)'
+    ];
+
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+
+        // Random properties
+        const size = Math.random() * 80 + 20; // 20-100px
+        const left = Math.random() * 100; // 0-100%
+        const duration = Math.random() * 15 + 15; // 15-30s
+        const delay = Math.random() * 5; // 0-5s
+        const color = colors[Math.floor(Math.random() * colors.length)];
+
+        particle.style.cssText = `
+            width: ${size}px;
+            height: ${size}px;
+            left: ${left}%;
+            bottom: -${size}px;
+            background: ${color};
+            animation-duration: ${duration}s;
+            animation-delay: ${delay}s;
+        `;
+
+        particlesContainer.appendChild(particle);
+
+        // Remove particle after animation
+        setTimeout(() => {
+            particle.remove();
+            createParticle(); // Create new particle
+        }, (duration + delay) * 1000);
+    }
+
+    // Create initial particles
+    for (let i = 0; i < particleCount; i++) {
+        setTimeout(() => createParticle(), i * 100);
+    }
+}
+
+// Initialize particles if container exists
+document.addEventListener('DOMContentLoaded', () => {
+    createParticles();
+});
+
+// ============================================
 // Console Message
 // ============================================
-console.log('%c🎵 Live Karaoke Астана', 'font-size: 20px; font-weight: bold; color: #ff1744;');
-console.log('%cРазработано для Live Karaoke | livekaraoke.kz', 'font-size: 12px; color: #7c4dff;');
+console.log('%c🎵 Live Karaoke Астана', 'font-size: 20px; font-weight: bold; color: #e94560;');
+console.log('%cРазработано для Live Karaoke | livekaraoke.kz', 'font-size: 12px; color: #6c63ff;');
 
 // ============================================
 // Export utilities for use in other scripts
@@ -396,6 +451,7 @@ if (typeof module !== 'undefined' && module.exports) {
         validatePhone,
         validateEmail,
         showMessage,
-        storage
+        storage,
+        createParticles
     };
 }

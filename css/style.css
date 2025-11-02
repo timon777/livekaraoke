@@ -356,6 +356,18 @@ a:hover {
     overflow: hidden;
 }
 
+/* Common Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 30, 0.6);
+    z-index: 2;
+}
+
+/* Option 1: Video Background */
 .hero-video-bg {
     position: absolute;
     top: 0;
@@ -365,23 +377,108 @@ a:hover {
     z-index: 0;
 }
 
-.hero-overlay {
+.hero-video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 14, 39, 0.7);
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
 }
 
-.hero-gradient {
+/* Option 2: Animated Gradient Background */
+.hero-bg-animated {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--gradient-overlay);
-    opacity: 0.8;
+    z-index: 0;
+    background: linear-gradient(180deg, #0f0f1e 0%, #1a1a2e 100%);
+}
+
+.gradient-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    mix-blend-mode: screen;
+}
+
+.gradient-layer-1 {
+    background: radial-gradient(circle at 20% 50%, rgba(233, 69, 96, 0.4) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+}
+
+.gradient-layer-2 {
+    background: radial-gradient(circle at 80% 50%, rgba(108, 99, 255, 0.4) 0%, transparent 50%);
+    animation: float 25s ease-in-out infinite reverse;
+}
+
+.gradient-layer-3 {
+    background: radial-gradient(circle at 50% 80%, rgba(255, 164, 91, 0.3) 0%, transparent 50%);
+    animation: float 30s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 30px) scale(0.9);
+    }
+}
+
+/* Option 3: Particles Background */
+.hero-particles-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(180deg, #0f0f1e 0%, #1a1a2e 100%);
+}
+
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(233, 69, 96, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particle-rise linear infinite;
+}
+
+@keyframes particle-rise {
+    0% {
+        transform: translateY(0) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
 }
 
 .hero-content {
