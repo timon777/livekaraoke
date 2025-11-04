@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Калькулятор стоимости услуг Live Karaoke Астана. Рассчитайте цену вашего мероприятия онлайн за 2 минуты.">
+    <title>Калькулятор стоимости - Live Karaoke Астана</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Quick Actions Bar -->
+    <div class="quick-actions">
+        <a href="tel:+77015125421" class="quick-action" aria-label="Позвонить">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/77015125421" target="_blank" class="quick-action" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://t.me/+77015125421" target="_blank" class="quick-action" aria-label="Telegram">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-music"></i>
+                        <span>Live Karaoke</span>
+                    </a>
+
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="calculator.html" class="active">Калькулятор</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="songs.html">Каталог песен</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+
+                    <a href="tel:+77015125421" class="header-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        +7 701 512 54 21
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">Калькулятор стоимости</h1>
+            <p class="page-description" data-aos="fade-up" data-aos-delay="100">
+                Рассчитайте стоимость вашего мероприятия за 2 минуты
+            </p>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-wrapper">
+                <div class="calculator-form" data-aos="fade-right">
+                    <form id="priceCalculator">
+                        <!-- Step 1: Service Type -->
+                        <div class="calculator-step active" data-step="1">
+                            <h3 class="step-title">
+                                <span class="step-number">1</span>
+                                Выберите услугу
+                            </h3>
+
+                            <div class="service-options">
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="cover-band" data-price="300000">
+                                    <div class="option-content">
+                                        <i class="fas fa-guitar"></i>
+                                        <h4>Кавер-группа</h4>
+                                        <p>Живые выступления группы</p>
+                                        <span class="option-price">от 300 000 ₸</span>
+                                    </div>
+                                </label>
+
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="live-karaoke" data-price="400000">
+                                    <div class="option-content">
+                                        <i class="fas fa-microphone-alt"></i>
+                                        <h4>Live Karaoke</h4>
+                                        <p>Караоке с живым аккомпанементом</p>
+                                        <span class="option-price">от 400 000 ₸</span>
+                                    </div>
+                                </label>
+
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="combo" data-price="700000">
+                                    <div class="option-content">
+                                        <i class="fas fa-music"></i>
+                                        <h4>Комбо</h4>
+                                        <p>Кавер-группа + Live Karaoke</p>
+                                        <span class="option-price">от 700 000 ₸</span>
+                                    </div>
+                                </label>
+
+                                <label class="service-option">
+                                    <input type="radio" name="service" value="equipment" data-price="50000">
+                                    <div class="option-content">
+                                        <i class="fas fa-volume-up"></i>
+                                        <h4>Аренда оборудования</h4>
+                                        <p>Звук и свет для вашего мероприятия</p>
+                                        <span class="option-price">от 50 000 ₸</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Duration -->
+                        <div class="calculator-step" data-step="2">
+                            <h3 class="step-title">
+                                <span class="step-number">2</span>
+                                Длительность мероприятия
+                            </h3>
+
+                            <div class="duration-options">
+                                <label class="duration-option">
+                                    <input type="radio" name="duration" value="2" data-multiplier="1">
+                                    <div class="option-content">
+                                        <i class="far fa-clock"></i>
+                                        <h4>2 часа</h4>
+                                        <p>Компактный формат</p>
+                                    </div>
+                                </label>
+
+                                <label class="duration-option">
+                                    <input type="radio" name="duration" value="3" data-multiplier="1.4">
+                                    <div class="option-content">
+                                        <i class="far fa-clock"></i>
+                                        <h4>3 часа</h4>
+                                        <p>Стандартный формат</p>
+                                    </div>
+                                </label>
+
+                                <label class="duration-option">
+                                    <input type="radio" name="duration" value="4" data-multiplier="1.7">
+                                    <div class="option-content">
+                                        <i class="far fa-clock"></i>
+                                        <h4>4 часа</h4>
+                                        <p>Расширенный формат</p>
+                                    </div>
+                                </label>
+
+                                <label class="duration-option">
+                                    <input type="radio" name="duration" value="5+" data-multiplier="2">
+                                    <div class="option-content">
+                                        <i class="far fa-clock"></i>
+                                        <h4>5+ часов</h4>
+                                        <p>Полный день</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Additional Options -->
+                        <div class="calculator-step" data-step="3">
+                            <h3 class="step-title">
+                                <span class="step-number">3</span>
+                                Дополнительные опции
+                            </h3>
+
+                            <div class="additional-options">
+                                <label class="additional-option">
+                                    <input type="checkbox" name="additional" value="presenter" data-price="80000">
+                                    <div class="option-content">
+                                        <i class="fas fa-user-tie"></i>
+                                        <div class="option-text">
+                                            <h4>Ведущий мероприятия</h4>
+                                            <p>Профессиональный ведущий</p>
+                                        </div>
+                                        <span class="option-price">+80 000 ₸</span>
+                                    </div>
+                                </label>
+
+                                <label class="additional-option">
+                                    <input type="checkbox" name="additional" value="photo-video" data-price="100000">
+                                    <div class="option-content">
+                                        <i class="fas fa-camera"></i>
+                                        <div class="option-text">
+                                            <h4>Фото и видеосъёмка</h4>
+                                            <p>Фотограф и видеограф</p>
+                                        </div>
+                                        <span class="option-price">+100 000 ₸</span>
+                                    </div>
+                                </label>
+
+                                <label class="additional-option">
+                                    <input type="checkbox" name="additional" value="dj" data-price="70000">
+                                    <div class="option-content">
+                                        <i class="fas fa-compact-disc"></i>
+                                        <div class="option-text">
+                                            <h4>DJ сет</h4>
+                                            <p>Диджей для танцевальной части</p>
+                                        </div>
+                                        <span class="option-price">+70 000 ₸</span>
+                                    </div>
+                                </label>
+
+                                <label class="additional-option">
+                                    <input type="checkbox" name="additional" value="extra-lighting" data-price="50000">
+                                    <div class="option-content">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <div class="option-text">
+                                            <h4>Расширенное световое шоу</h4>
+                                            <p>Дополнительное световое оборудование</p>
+                                        </div>
+                                        <span class="option-price">+50 000 ₸</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Event Details -->
+                        <div class="calculator-step" data-step="4">
+                            <h3 class="step-title">
+                                <span class="step-number">4</span>
+                                Детали мероприятия
+                            </h3>
+
+                            <div class="event-details-form">
+                                <div class="form-group">
+                                    <label for="eventDate">
+                                        <i class="far fa-calendar"></i>
+                                        Дата мероприятия
+                                    </label>
+                                    <input type="date" id="eventDate" name="eventDate" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="guestCount">
+                                        <i class="fas fa-users"></i>
+                                        Количество гостей
+                                    </label>
+                                    <input type="number" id="guestCount" name="guestCount" placeholder="Примерное количество" min="10" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="eventType">
+                                        <i class="fas fa-star"></i>
+                                        Тип мероприятия
+                                    </label>
+                                    <select id="eventType" name="eventType" required>
+                                        <option value="">Выберите тип</option>
+                                        <option value="corporate">Корпоратив</option>
+                                        <option value="wedding">Свадьба</option>
+                                        <option value="birthday">День рождения</option>
+                                        <option value="anniversary">Юбилей</option>
+                                        <option value="party">Частная вечеринка</option>
+                                        <option value="public">Общественное мероприятие</option>
+                                        <option value="other">Другое</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="venue">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Место проведения
+                                    </label>
+                                    <input type="text" id="venue" name="venue" placeholder="Название площадки или адрес" required>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="comments">
+                                        <i class="fas fa-comment"></i>
+                                        Дополнительные пожелания
+                                    </label>
+                                    <textarea id="comments" name="comments" rows="4" placeholder="Расскажите о ваших пожеланиях к репертуару, особенностях мероприятия и т.д."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Contact Info -->
+                        <div class="calculator-step" data-step="5">
+                            <h3 class="step-title">
+                                <span class="step-number">5</span>
+                                Ваши контактные данные
+                            </h3>
+
+                            <div class="contact-form">
+                                <div class="form-group">
+                                    <label for="clientName">
+                                        <i class="fas fa-user"></i>
+                                        Ваше имя
+                                    </label>
+                                    <input type="text" id="clientName" name="clientName" placeholder="Как к вам обращаться?" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="clientPhone">
+                                        <i class="fas fa-phone"></i>
+                                        Номер телефона
+                                    </label>
+                                    <input type="tel" id="clientPhone" name="clientPhone" placeholder="+7 (___) ___-__-__" required>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="clientEmail">
+                                        <i class="fas fa-envelope"></i>
+                                        Email (необязательно)
+                                    </label>
+                                    <input type="email" id="clientEmail" name="clientEmail" placeholder="your@email.com">
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="agree" required>
+                                        <span>Я согласен на обработку персональных данных</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="calculator-navigation">
+                            <button type="button" class="btn btn-outline" id="prevStep" style="display: none;">
+                                <i class="fas fa-arrow-left"></i>
+                                Назад
+                            </button>
+                            <button type="button" class="btn btn-primary" id="nextStep">
+                                Далее
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button type="submit" class="btn btn-primary btn-lg" id="submitCalculator" style="display: none;">
+                                <i class="fas fa-paper-plane"></i>
+                                Отправить заявку
+                            </button>
+                        </div>
+
+                        <!-- Progress Indicator -->
+                        <div class="calculator-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <p class="progress-text">Шаг <span id="currentStep">1</span> из 5</p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Price Summary -->
+                <div class="price-summary" data-aos="fade-left">
+                    <div class="summary-card">
+                        <h3>Расчёт стоимости</h3>
+
+                        <div class="summary-details" id="summaryDetails">
+                            <p class="summary-placeholder">
+                                <i class="fas fa-info-circle"></i>
+                                Выберите параметры вашего мероприятия, чтобы увидеть расчёт
+                            </p>
+                        </div>
+
+                        <div class="summary-total" id="summaryTotal" style="display: none;">
+                            <div class="total-label">Итого:</div>
+                            <div class="total-amount" id="totalAmount">0 ₸</div>
+                        </div>
+
+                        <div class="summary-note">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Финальная стоимость может варьироваться в зависимости от удалённости площадки и особенностей мероприятия</p>
+                        </div>
+
+                        <div class="summary-benefits">
+                            <h4>Что входит в стоимость:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Профессиональные музыканты</li>
+                                <li><i class="fas fa-check"></i> Звуковое оборудование</li>
+                                <li><i class="fas fa-check"></i> Световое оформление</li>
+                                <li><i class="fas fa-check"></i> Доставка и монтаж</li>
+                                <li><i class="fas fa-check"></i> Звукорежиссёр</li>
+                                <li><i class="fas fa-check"></i> Репетиции группы</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="calculator-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fas fa-clock"></i>
+                    <h4>Быстрый ответ</h4>
+                    <p>Свяжемся с вами в течение 30 минут</p>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Без обязательств</h4>
+                    <p>Расчёт стоимости ни к чему не обязывает</p>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-gift"></i>
+                    <h4>Специальные предложения</h4>
+                    <p>Скидки при раннем бронировании</p>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-file-contract"></i>
+                    <h4>Договор</h4>
+                    <p>Официальное оформление сотрудничества</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-music"></i>
+                        <span>Live Karaoke</span>
+                    </div>
+                    <p class="footer-text">
+                        Профессиональная кавер-группа<br>
+                        и живое караоке в Астане
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Навигация</h4>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="calculator.html">Калькулятор</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="songs.html">Каталог песен</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-menu">
+                        <li><a href="services.html#cover-band">Кавер-группа</a></li>
+                        <li><a href="services.html#live-karaoke">Live Karaoke</a></li>
+                        <li><a href="services.html#equipment">Аренда оборудования</a></li>
+                        <li><a href="corporate.html">Корпоративы</a></li>
+                        <li><a href="parties.html">Частные вечеринки</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+77015125421">+7 701 512 54 21</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Астана, Казахстан</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/77015125421">WhatsApp</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-telegram"></i>
+                            <a href="https://t.me/+77015125421">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Live Karaoke Астана. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <!-- Calculator Script -->
+    <script src="js/calculator.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
