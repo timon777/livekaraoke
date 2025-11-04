@@ -1,0 +1,25 @@
+# Ignore video files (too large for git)
+videos/*.mp4
+videos/*.webm
+videos/*.mov
+videos/*.avi
+
+# Keep README
+!videos/README.md
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
