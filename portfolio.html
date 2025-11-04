@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио Live Karaoke Астана - видео с наших выступлений, фотографии с мероприятий, отзывы клиентов.">
+    <title>Портфолио - Live Karaoke Астана</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Quick Actions Bar -->
+    <div class="quick-actions">
+        <a href="tel:+77015125421" class="quick-action" aria-label="Позвонить">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/77015125421" target="_blank" class="quick-action" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://t.me/+77015125421" target="_blank" class="quick-action" aria-label="Telegram">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-music"></i>
+                        <span>Live Karaoke</span>
+                    </a>
+
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="calculator.html">Калькулятор</a></li>
+                        <li><a href="portfolio.html" class="active">Портфолио</a></li>
+                        <li><a href="songs.html">Каталог песен</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+
+                    <a href="tel:+77015125421" class="header-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        +7 701 512 54 21
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">Наше портфолио</h1>
+            <p class="page-description" data-aos="fade-up" data-aos-delay="100">
+                Видео и фото с наших выступлений, отзывы довольных клиентов
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="portfolio-filter">
+        <div class="container">
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="video">Видео</button>
+                <button class="filter-btn" data-filter="corporate">Корпоративы</button>
+                <button class="filter-btn" data-filter="wedding">Свадьбы</button>
+                <button class="filter-btn" data-filter="party">Вечеринки</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery -->
+    <section class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Видео с выступлений</h2>
+
+            <div class="video-grid">
+                <!-- Video Item 1 -->
+                <div class="portfolio-item video corporate" data-aos="fade-up" data-aos-delay="0">
+                    <div class="portfolio-item-wrapper">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <img src="https://via.placeholder.com/400x225/e94560/ffffff?text=Корпоратив+2024" alt="Корпоратив 2024">
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Корпоратив IT-компании</h3>
+                            <p>Live Karaoke для 200 гостей</p>
+                            <span class="portfolio-tag">Корпоратив</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 2 -->
+                <div class="portfolio-item video wedding" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-item-wrapper">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <img src="https://via.placeholder.com/400x225/6c63ff/ffffff?text=Свадьба" alt="Свадьба">
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Свадебная церемония</h3>
+                            <p>Кавер-группа + караоке</p>
+                            <span class="portfolio-tag">Свадьба</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="portfolio-item video party" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-item-wrapper">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <img src="https://via.placeholder.com/400x225/ffa45b/ffffff?text=День+рождения" alt="День рождения">
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Юбилей 50 лет</h3>
+                            <p>Живое выступление группы</p>
+                            <span class="portfolio-tag">Вечеринка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 4 -->
+                <div class="portfolio-item video corporate" data-aos="fade-up" data-aos-delay="0">
+                    <div class="portfolio-item-wrapper">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <img src="https://via.placeholder.com/400x225/e94560/ffffff?text=Новогодний+корпоратив" alt="Новогодний корпоратив">
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Новогодний корпоратив</h3>
+                            <p>Полная программа 5 часов</p>
+                            <span class="portfolio-tag">Корпоратив</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 5 -->
+                <div class="portfolio-item video party" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-item-wrapper">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <img src="https://via.placeholder.com/400x225/6c63ff/ffffff?text=Частная+вечеринка" alt="Частная вечеринка">
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Частная вечеринка</h3>
+                            <p>Live Karaoke в загородном доме</p>
+                            <span class="portfolio-tag">Вечеринка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 6 -->
+                <div class="portfolio-item video corporate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-item-wrapper">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <img src="https://via.placeholder.com/400x225/ffa45b/ffffff?text=Открытие+ресторана" alt="Открытие ресторана">
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Открытие ресторана</h3>
+                            <p>Кавер-группа для гостей</p>
+                            <span class="portfolio-tag">Корпоратив</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="photo-gallery">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Фото с мероприятий</h2>
+
+            <div class="photo-grid">
+                <div class="photo-item" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="https://via.placeholder.com/400x300/e94560/ffffff?text=Photo+1" alt="Фото с мероприятия 1">
+                </div>
+                <div class="photo-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/400x300/6c63ff/ffffff?text=Photo+2" alt="Фото с мероприятия 2">
+                </div>
+                <div class="photo-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/400x300/ffa45b/ffffff?text=Photo+3" alt="Фото с мероприятия 3">
+                </div>
+                <div class="photo-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://via.placeholder.com/400x300/e94560/ffffff?text=Photo+4" alt="Фото с мероприятия 4">
+                </div>
+                <div class="photo-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://via.placeholder.com/400x300/6c63ff/ffffff?text=Photo+5" alt="Фото с мероприятия 5">
+                </div>
+                <div class="photo-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://via.placeholder.com/400x300/ffa45b/ffffff?text=Photo+6" alt="Фото с мероприятия 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Отзывы клиентов</h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Потрясающее выступление! Live Karaoke стала изюминкой нашего корпоратива.
+                        Все гости были в восторге. Профессиональные музыканты, отличное оборудование.
+                        Обязательно закажем снова!"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Алия Нурланова</strong>
+                        <span>HR-директор, IT-компания</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Спасибо огромное за незабываемый вечер на нашей свадьбе! Кавер-группа исполнила
+                        все наши любимые песни. Гости до сих пор вспоминают этот праздник. Вы лучшие!"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Дмитрий и Анна</strong>
+                        <span>Молодожёны</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Организовали юбилей мамы с Live Karaoke. Атмосфера была невероятная! Даже те,
+                        кто обычно не поёт, вышли к микрофону. Живое сопровождение - это совсем другой уровень."
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Ерлан Сатпаев</strong>
+                        <span>Организатор семейного праздника</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Профессионалы своего дела! Отличный репертуар, качественный звук, приятные люди.
+                        Заказывали для открытия нашего ресторана. Все прошло на высшем уровне!"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Марат Жунусов</strong>
+                        <span>Владелец ресторана</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Сотрудничаем уже третий год. Заказываем Live Karaoke на все корпоративные мероприятия.
+                        Надёжные, пунктуальные, всегда на высоте. Рекомендую!"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Гульнара Абдуллина</strong>
+                        <span>Директор по маркетингу</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Отмечали день рождения друга. Вечер получился незабываемым! Музыканты создали
+                        потрясающую атмосферу. Все гости остались довольны. Спасибо!"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Айгерим Токтарова</strong>
+                        <span>Организатор вечеринки</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="portfolio-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Успешных мероприятий</div>
+                </div>
+
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Довольных гостей</div>
+                </div>
+
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Лет опыта</div>
+                </div>
+
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Положительных отзывов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 class="cta-title">Хотите так же?</h2>
+                <p class="cta-description">
+                    Рассчитайте стоимость вашего мероприятия и станьте частью нашего портфолио
+                </p>
+                <div class="cta-buttons">
+                    <a href="calculator.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calculator"></i>
+                        Рассчитать стоимость
+                    </a>
+                    <a href="tel:+77015125421" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone-alt"></i>
+                        +7 701 512 54 21
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-music"></i>
+                        <span>Live Karaoke</span>
+                    </div>
+                    <p class="footer-text">
+                        Профессиональная кавер-группа<br>
+                        и живое караоке в Астане
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Навигация</h4>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="calculator.html">Калькулятор</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="songs.html">Каталог песен</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-menu">
+                        <li><a href="services.html#cover-band">Кавер-группа</a></li>
+                        <li><a href="services.html#live-karaoke">Live Karaoke</a></li>
+                        <li><a href="services.html#equipment">Аренда оборудования</a></li>
+                        <li><a href="corporate.html">Корпоративы</a></li>
+                        <li><a href="parties.html">Частные вечеринки</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+77015125421">+7 701 512 54 21</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Астана, Казахстан</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/77015125421">WhatsApp</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-telegram"></i>
+                            <a href="https://t.me/+77015125421">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Live Karaoke Астана. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <!-- Portfolio Filter Script -->
+    <script src="js/portfolio.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

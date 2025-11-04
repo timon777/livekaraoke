@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог песен Live Karaoke Астана - более 1000 композиций на русском, казахском, английском языках. Найдите свои любимые песни.">
+    <title>Каталог песен - Live Karaoke Астана</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Quick Actions Bar -->
+    <div class="quick-actions">
+        <a href="tel:+77015125421" class="quick-action" aria-label="Позвонить">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/77015125421" target="_blank" class="quick-action" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://t.me/+77015125421" target="_blank" class="quick-action" aria-label="Telegram">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-music"></i>
+                        <span>Live Karaoke</span>
+                    </a>
+
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="calculator.html">Калькулятор</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="songs.html" class="active">Каталог песен</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+
+                    <a href="tel:+77015125421" class="header-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        +7 701 512 54 21
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">Каталог песен</h1>
+            <p class="page-description" data-aos="fade-up" data-aos-delay="100">
+                Более 1000 композиций в нашем репертуаре
+            </p>
+        </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="songs-search">
+        <div class="container">
+            <div class="search-wrapper" data-aos="fade-up">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="songSearch" placeholder="Поиск по названию или исполнителю...">
+                </div>
+
+                <div class="language-filter">
+                    <button class="lang-btn active" data-lang="all">Все</button>
+                    <button class="lang-btn" data-lang="ru">Русские</button>
+                    <button class="lang-btn" data-lang="kz">Казахские</button>
+                    <button class="lang-btn" data-lang="en">Английские</button>
+                </div>
+
+                <div class="genre-filter">
+                    <select id="genreFilter">
+                        <option value="all">Все жанры</option>
+                        <option value="pop">Поп</option>
+                        <option value="rock">Рок</option>
+                        <option value="jazz">Джаз</option>
+                        <option value="folk">Народные</option>
+                        <option value="dance">Танцевальные</option>
+                        <option value="retro">Ретро</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Songs Categories -->
+    <section class="songs-catalog">
+        <div class="container">
+            <!-- Popular Songs -->
+            <div class="song-category" data-aos="fade-up">
+                <h2 class="category-title">
+                    <i class="fas fa-fire"></i>
+                    Популярные хиты
+                </h2>
+                <div class="songs-grid">
+                    <div class="song-card">
+                        <div class="song-info">
+                            <h3 class="song-title">Миллион алых роз</h3>
+                            <p class="song-artist">Алла Пугачёва</p>
+                        </div>
+                        <span class="song-lang ru">RU</span>
+                    </div>
+
+                    <div class="song-card">
+                        <div class="song-info">
+                            <h3 class="song-title">Кукушка</h3>
+                            <p class="song-artist">Виктор Цой</p>
+                        </div>
+                        <span class="song-lang ru">RU</span>
+                    </div>
+
+                    <div class="song-card">
+                        <div class="song-info">
+                            <h3 class="song-title">Мой Казахстан</h3>
+                            <p class="song-artist">Роза Рымбаева</p>
+                        </div>
+                        <span class="song-lang kz">KZ</span>
+                    </div>
+
+                    <div class="song-card">
+                        <div class="song-info">
+                            <h3 class="song-title">Bohemian Rhapsody</h3>
+                            <p class="song-artist">Queen</p>
+                        </div>
+                        <span class="song-lang en">EN</span>
+                    </div>
+
+                    <div class="song-card">
+                        <div class="song-info">
+                            <h3 class="song-title">Выйду на улицу</h3>
+                            <p class="song-artist">Земфира</p>
+                        </div>
+                        <span class="song-lang ru">RU</span>
+                    </div>
+
+                    <div class="song-card">
+                        <div class="song-info">
+                            <h3 class="song-title">Hotel California</h3>
+                            <p class="song-artist">Eagles</p>
+                        </div>
+                        <span class="song-lang en">EN</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Russian Songs -->
+            <div class="song-category" data-aos="fade-up">
+                <h2 class="category-title">
+                    <i class="fas fa-music"></i>
+                    Русские хиты
+                </h2>
+                <div class="songs-list">
+                    <div class="song-item">
+                        <span class="song-number">1</span>
+                        <div class="song-details">
+                            <h4>Владимирский централ</h4>
+                            <p>Михаил Круг</p>
+                        </div>
+                        <span class="song-genre">Шансон</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">2</span>
+                        <div class="song-details">
+                            <h4>Группа крови</h4>
+                            <p>Виктор Цой</p>
+                        </div>
+                        <span class="song-genre">Рок</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">3</span>
+                        <div class="song-details">
+                            <h4>Город золотой</h4>
+                            <p>Аквариум</p>
+                        </div>
+                        <span class="song-genre">Рок</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">4</span>
+                        <div class="song-details">
+                            <h4>Комбат</h4>
+                            <p>Любэ</p>
+                        </div>
+                        <span class="song-genre">Рок</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">5</span>
+                        <div class="song-details">
+                            <h4>Снег</h4>
+                            <p>Сплин</p>
+                        </div>
+                        <span class="song-genre">Рок</span>
+                    </div>
+                </div>
+                <button class="show-more-btn">
+                    Показать больше
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+
+            <!-- Kazakh Songs -->
+            <div class="song-category" data-aos="fade-up">
+                <h2 class="category-title">
+                    <i class="fas fa-music"></i>
+                    Казахские песни
+                </h2>
+                <div class="songs-list">
+                    <div class="song-item">
+                        <span class="song-number">1</span>
+                        <div class="song-details">
+                            <h4>Жұлдыздар</h4>
+                            <p>Димаш Кудайберген</p>
+                        </div>
+                        <span class="song-genre">Поп</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">2</span>
+                        <div class="song-details">
+                            <h4>Атамекен</h4>
+                            <p>Роза Рымбаева</p>
+                        </div>
+                        <span class="song-genre">Поп</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">3</span>
+                        <div class="song-details">
+                            <h4>Дулат</h4>
+                            <p>Нұржан Керменбаев</p>
+                        </div>
+                        <span class="song-genre">Народная</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">4</span>
+                        <div class="song-details">
+                            <h4>Арман</h4>
+                            <p>Мадина Садуақасова</p>
+                        </div>
+                        <span class="song-genre">Поп</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">5</span>
+                        <div class="song-details">
+                            <h4>Туған жер</h4>
+                            <p>Ұлытау</p>
+                        </div>
+                        <span class="song-genre">Этно-рок</span>
+                    </div>
+                </div>
+                <button class="show-more-btn">
+                    Показать больше
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+
+            <!-- English Songs -->
+            <div class="song-category" data-aos="fade-up">
+                <h2 class="category-title">
+                    <i class="fas fa-music"></i>
+                    Англоязычные хиты
+                </h2>
+                <div class="songs-list">
+                    <div class="song-item">
+                        <span class="song-number">1</span>
+                        <div class="song-details">
+                            <h4>Shape of You</h4>
+                            <p>Ed Sheeran</p>
+                        </div>
+                        <span class="song-genre">Поп</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">2</span>
+                        <div class="song-details">
+                            <h4>Rolling in the Deep</h4>
+                            <p>Adele</p>
+                        </div>
+                        <span class="song-genre">Поп</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">3</span>
+                        <div class="song-details">
+                            <h4>Wonderwall</h4>
+                            <p>Oasis</p>
+                        </div>
+                        <span class="song-genre">Рок</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">4</span>
+                        <div class="song-details">
+                            <h4>Billie Jean</h4>
+                            <p>Michael Jackson</p>
+                        </div>
+                        <span class="song-genre">Поп</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="song-number">5</span>
+                        <div class="song-details">
+                            <h4>Don't Stop Believin'</h4>
+                            <p>Journey</p>
+                        </div>
+                        <span class="song-genre">Рок</span>
+                    </div>
+                </div>
+                <button class="show-more-btn">
+                    Показать больше
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Song Request Section -->
+    <section class="song-request">
+        <div class="container">
+            <div class="request-card" data-aos="fade-up">
+                <div class="request-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <h2>Не нашли нужную песню?</h2>
+                <p>
+                    Мы можем выучить любую песню специально для вашего мероприятия!
+                    Просто сообщите нам название за 2 недели до события.
+                </p>
+                <a href="contacts.html" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Отправить запрос
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 class="cta-title">Готовы спеть ваши любимые песни?</h2>
+                <p class="cta-description">
+                    Забронируйте Live Karaoke для вашего мероприятия
+                </p>
+                <div class="cta-buttons">
+                    <a href="calculator.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calculator"></i>
+                        Рассчитать стоимость
+                    </a>
+                    <a href="tel:+77015125421" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone-alt"></i>
+                        +7 701 512 54 21
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-music"></i>
+                        <span>Live Karaoke</span>
+                    </div>
+                    <p class="footer-text">
+                        Профессиональная кавер-группа<br>
+                        и живое караоке в Астане
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Навигация</h4>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="calculator.html">Калькулятор</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                        <li><a href="songs.html">Каталог песен</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-menu">
+                        <li><a href="services.html#cover-band">Кавер-группа</a></li>
+                        <li><a href="services.html#live-karaoke">Live Karaoke</a></li>
+                        <li><a href="services.html#equipment">Аренда оборудования</a></li>
+                        <li><a href="corporate.html">Корпоративы</a></li>
+                        <li><a href="parties.html">Частные вечеринки</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+77015125421">+7 701 512 54 21</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Астана, Казахстан</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/77015125421">WhatsApp</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-telegram"></i>
+                            <a href="https://t.me/+77015125421">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Live Karaoke Астана. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+    <!-- Songs Filter Script -->
+    <script src="js/songs.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
