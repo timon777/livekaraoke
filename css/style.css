@@ -995,6 +995,42 @@ section {
     color: var(--color-text-muted);
 }
 
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-developer {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.developer-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-base);
+    position: relative;
+}
+
+.developer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: var(--transition-base);
+}
+
+.developer-link:hover {
+    color: var(--color-primary-light);
+}
+
+.developer-link:hover::after {
+    width: 100%;
+}
+
 /* ============================================
    Responsive Design
    ============================================ */
