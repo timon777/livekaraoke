@@ -1,0 +1,14 @@
+{
+  "name": "telegram-userbot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "s": "/opt/plesk/node/24/bin/node app.js"
+  },
+  "dependencies": {
+    "telegram": "^2.26.22",
+    "input": "^1.0.1"
+  }
+}
