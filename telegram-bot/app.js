@@ -22,14 +22,52 @@ const client = new TelegramClient(session, apiId, apiHash, { connectionRetries: 
     console.log("\n🔑 Скопируй эту строку и вставь в Plesk-код:");
     console.log(client.session.save());
 
-    // Получение сообщений из канала
-    console.log("\n📨 Получение сообщений из канала @charterticketsme...\n");
+    // Показать список всех диалогов (групп, каналов, чатов)
+    console.log("\n📋 Получение списка ваших диалогов...\n");
 
-    const channelUsername = "charterticketsme";
+    try {
+      const dialogs = await client.getDialogs({ limit: 100 });
+
+      console.log("═".repeat(60));
+      console.log("ВАШИ ГРУППЫ И КАНАЛЫ:");
+      console.log("═".repeat(60));
+
+      dialogs.forEach((dialog, index) => {
+        const entity = dialog.entity;
+        const type = entity.className;
+        let name = entity.title || entity.firstName || "Без названия";
+        let username = entity.username ? `@${entity.username}` : "";
+        let id = entity.id;
+
+        // Определяем тип
+        let typeIcon = "💬";
+        let typeText = "Чат";
+
+        if (type === "Channel") {
+          typeIcon = entity.broadcast ? "📢" : "👥";
+          typeText = entity.broadcast ? "Канал" : "Группа";
+        }
+
+        console.log(`\n${index + 1}. ${typeIcon} ${name}`);
+        if (username) console.log(`   Username: ${username}`);
+        console.log(`   ID: ${id}`);
+        console.log(`   Тип: ${typeText}`);
+        console.log("─".repeat(60));
+      });
+
+    } catch (dialogsError) {
+      console.error("❌ Ошибка при получении списка диалогов:", dialogsError.message);
+    }
+
+    // Получение сообщений из канала/группы
+    console.log("\n📨 Получение сообщений...\n");
+
+    // Можно указать username (для публичных) или ID (для приватных групп)
+    const chatSource = "charterticketsme"; // или ID группы, например: -1001234567890
     const limit = 10; // Количество последних сообщений
 
     try {
-      const messages = await client.getMessages(channelUsername, { limit });
+      const messages = await client.getMessages(chatSource, { limit });
 
       if (messages.length === 0) {
         console.log("❌ Сообщений не найдено");
@@ -40,7 +78,15 @@ const client = new TelegramClient(session, apiId, apiHash, { connectionRetries: 
         messages.reverse().forEach((msg, index) => {
           console.log(`\n📩 Сообщение #${index + 1}`);
           console.log(`📅 Дата: ${msg.date.toLocaleString('ru-RU')}`);
-          console.log(`👤 От: ${msg.sender?.username || msg.sender?.firstName || 'Канал'}`);
+
+          // Получаем информацию об отправителе
+          let senderInfo = 'Неизвестно';
+          if (msg.sender) {
+            senderInfo = msg.sender.username
+              ? `@${msg.sender.username}`
+              : (msg.sender.firstName || '') + (msg.sender.lastName ? ' ' + msg.sender.lastName : '');
+          }
+          console.log(`👤 От: ${senderInfo}`);
 
           if (msg.message) {
             console.log(`💬 Текст:\n${msg.message}`);
@@ -53,13 +99,14 @@ const client = new TelegramClient(session, apiId, apiHash, { connectionRetries: 
           console.log("─".repeat(60));
         });
       }
-    } catch (channelError) {
-      console.error("\n❌ Ошибка при получении сообщений из канала:");
-      console.error(channelError.message);
+    } catch (chatError) {
+      console.error("\n❌ Ошибка при получении сообщений:");
+      console.error(chatError.message);
 
-      if (channelError.message.includes("No user has")) {
-        console.log("\n💡 Возможно, канал не найден или у вас нет доступа.");
-        console.log("   Убедитесь, что вы подписаны на канал @charterticketsme");
+      if (chatError.message.includes("No user has") || chatError.message.includes("USERNAME_INVALID")) {
+        console.log("\n💡 Возможно, канал/группа не найдены или у вас нет доступа.");
+        console.log("   Для приватных групп используйте ID вместо username.");
+        console.log("   ID можно найти в списке диалогов выше.");
       }
     }
 
